@@ -7,10 +7,9 @@ class Teacher(Person):
         super().__init__(fname, lname, email)
         self.students = students if students else []
         self.department = None
-        self.HOD = None
 
     def __repr__(self):
-        return ' Teacher : {}, {}, {}, {}, {}'.format(self.fname, self.lname, self.email, self.department, self.HOD)
+        return ' Teacher : {}, {}, {}, {}'.format(self.fname, self.lname, self.email, self.department)
 
     def set_department(self, department):
         self.department = department
@@ -22,6 +21,3 @@ class Teacher(Person):
     def remove_student(self, student):
         if student in self.students:
             self.students.remove(student)
-
-    def set_HOD(self, hod):
-        self.HOD = hod
