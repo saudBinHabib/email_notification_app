@@ -7,4 +7,4 @@ class Person:
 
     @property
     def full_name(self):
-        return '{1} {0}'.format(self.fname, self.lname)
+        return '{0} {1}'.format(self.fname, self.lname)
